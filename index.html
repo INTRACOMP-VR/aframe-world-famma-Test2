@@ -2,66 +2,31 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>famma-Test2</title>
+		<title>aframe-world-famma-Test2</title>
 		<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 		<script src="https://unpkg.com/@softeng-761-2025-team-10/aframe-inspector/dist/aframe-inspector.min.js"></script>
+		{{permissionScript}}
 	</head>
 	<body>
 		<a-scene>
-			<a-light type="ambient" color="#445566" intensity="1"></a-light>
-			<a-light
-				type="directional"
-				position="2 4 3"
-				intensity="1"
-			></a-light>
-			<a-light
-				type="point"
-				position="-2 3 0"
-				color="#FF6B6B"
-				intensity="1"
-			></a-light>
-
-			<a-box
-				id="blue-box"
-				position="-1.5 0.5 -3"
-				rotation="0 45 0"
-				material="color: #4CC3D9; metalness: 0.8; roughness: 0.2"
-				shadow="cast: true; receive: false"
-			></a-box>
-
-			<a-sphere
-				id="red-sphere"
-				position="0 1.25 -5"
-				radius="1.25"
-				material="color: #EF2D5E; metalness: 0.3; roughness: 0.7"
-				shadow="cast: true; receive: false"
-			></a-sphere>
-
-			<a-cylinder
-				id="yellow-cylinder"
-				position="1.5 0.75 -3"
-				radius="0.5"
-				height="1.5"
-				material="color: #FFC65D; metalness: 0.1; roughness: 0.4"
-				shadow="cast: true; receive: false"
-			></a-cylinder>
-
-			<a-torus
-				id="purple-torus"
-				position="-2.5 1 -5"
-				radius="0.6"
-				radius-tubular="0.15"
-				material="color: #A855F7; metalness: 0.9; roughness: 0.1"
-				shadow="cast: true; receive: false"
-			></a-torus>
-
-			<a-dodecahedron
-				id="green-dodecahedron"
-				position="2.5 1.2 -5"
-				radius="0.7"
-				material="color: #10B981; metalness: 0.5; roughness: 0.5"
-				shadow="cast: true; receive: false"
-			></a-dodecahedron>
+			<!-- User entities -->
+			      <a-light type="ambient" color="#445566" intensity="1"></a-light>
+      <a-light type="directional" position="2 4 3" intensity="1"></a-light>
+      <a-light type="point" position="-2 3 0" color="#FF6B6B" intensity="1"></a-light>
+      <a-box id="blue-box" position="-1.5 0.5 -3" rotation="0 45 0" shadow="cast: true; receive: false" material="color: #4CC3D9; metalness: 0.8; roughness: 0.2"></a-box>
+      <a-sphere id="red-sphere" position="0 1.25 -5" radius="1.25" shadow="cast: true; receive: false" material="color: #EF2D5E; metalness: 0.3; roughness: 0.7"></a-sphere>
+      <a-cylinder id="yellow-cylinder" position="1.5 0.75 -3" radius="0.5" height="1.5" shadow="cast: true; receive: false" material="color: #FFC65D; metalness: 0.1; roughness: 0.4"></a-cylinder>
+      <a-torus id="purple-torus" position="-2.5 1 -5" radius="0.6" radius-tubular="0.15" shadow="cast: true; receive: false" material="color: #A855F7; metalness: 0.9; roughness: 0.1"></a-torus>
+      <a-dodecahedron id="green-dodecahedron" position="2.5 1.2 -5" radius="0.7" shadow="cast: true; receive: false" material="color: #10B981; metalness: 0.5; roughness: 0.5"></a-dodecahedron>
+			<a-plane
+				id="ground"
+				position="0 0 -4"
+				rotation="-90 0 0"
+				width="4"
+				height="4"
+				color="#7BC8A4"
+			></a-plane>
+			<a-sky id="sky" color="#ECECEC"></a-sky>
 		</a-scene>
 	</body>
 </html>
